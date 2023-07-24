@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env_vars_check_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crepou <crepou@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 02:48:44 by crepou            #+#    #+#             */
-/*   Updated: 2023/07/24 18:01:38 by crepou           ###   ########.fr       */
+/*   Updated: 2023/07/24 18:29:28 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*next_var(char *str, char	*real_str, int *i)
 			stop_if_quote_type(&real_str, quote_type, i);
 		else
 			stop_if_any_quote(&real_str, i);
-		if (*(real_str + 1) && *(real_str + 1) == 32)
 		(*i)++;
 	}
 	else

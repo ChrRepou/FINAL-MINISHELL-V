@@ -25,8 +25,8 @@ rm -f tmp_out
 
 /bin/echo 'echo 42' | cat <tmp_file
 /bin/echo file > tmp_file
-/bin/echo 'echo 42' | cat <tmp_file
-rm -f tmp_file
+
+rm /bin/echo 'echo 42' | cat <tmp_file-f tmp_file
 
 cat /dev/urandom | head -1 > tmp_out
 bash -c "[ -s tmp_out ] && echo nice"
