@@ -6,7 +6,7 @@
 /*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:04:46 by apaghera          #+#    #+#             */
-/*   Updated: 2023/07/21 20:05:43 by apaghera         ###   ########.fr       */
+/*   Updated: 2023/07/24 18:55:30 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,9 +110,10 @@ int	pwd_goes_void(char **env, t_cmds *cmds)
 	if (!dir)
 		perror(dir);
 	is_void = is_void_pwd(cmds);
-	if (!dir || !is_void)
+	if (!is_void && dir)
+		free(dir);
+	if (!dir)
 		return (0);
-	free(dir);
 	dir = ft_strdup(cmds[0].cmds[1]);
 	if (chdir(dir) != 0)
 		return (perror(dir), free(dir), 0);

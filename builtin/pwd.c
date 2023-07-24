@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pwd.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apaghera <apaghera@student.42heilbronn.de> +#+  +:+       +#+        */
+/*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 19:10:29 by apaghera          #+#    #+#             */
-/*   Updated: 2023/07/03 19:44:18 by apaghera         ###   ########.fr       */
+/*   Updated: 2023/07/24 18:56:53 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,11 @@ int	build_pwd(t_cmds *cmds)
 		if (!pwd)
 			return (perror(pwd), 0);
 		if (cmds[0].data.pipe_out != -1)
-		{
 			ft_putendl_fd(pwd, cmds[0].data.pipe_out);
-			return (1);
-		}
 		else
-		{
 			ft_putendl_fd(pwd, 1);
-			return (1);
-		}
+		free(pwd);	
+		return (1);
 	}
 	free(check_format);
 	return (0);
