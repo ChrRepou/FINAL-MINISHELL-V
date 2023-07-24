@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cd.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apaghera <apaghera@student.42heilbronn.de> +#+  +:+       +#+        */
+/*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 20:20:51 by apaghera          #+#    #+#             */
-/*   Updated: 2023/07/06 18:53:55 by apaghera         ###   ########.fr       */
+/*   Updated: 2023/07/24 19:24:10 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	cd_user(char **env, t_cmds *cmds)
 		if (!dir)
 			perror(dir);
 		status = go_to_user(cmds, dir, env);
+		if (dir)
+			free(dir);
 	}	
 	return (status);
 }

@@ -6,7 +6,7 @@
 /*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 19:10:29 by apaghera          #+#    #+#             */
-/*   Updated: 2023/07/24 18:56:53 by apaghera         ###   ########.fr       */
+/*   Updated: 2023/07/24 19:21:32 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	build_pwd(t_cmds *cmds)
 			ft_putendl_fd(pwd, cmds[0].data.pipe_out);
 		else
 			ft_putendl_fd(pwd, 1);
-		free(pwd);	
+		free(pwd);
 		return (1);
 	}
 	free(check_format);

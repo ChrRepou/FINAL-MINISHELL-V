@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crepou <crepou@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: apaghera <apaghera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 01:40:10 by crepou            #+#    #+#             */
-/*   Updated: 2023/07/24 01:45:20 by crepou           ###   ########.fr       */
+/*   Updated: 2023/07/24 19:26:58 by apaghera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ void	init_values(int *i, int *last_pid, int *prev_pid)
 
 void	init_export_vals(char **name, char **val, int *tmp)
 {
-	name = NULL;
-	val = NULL;
+	*name = NULL;
+	*val = NULL;
 	*tmp = 0;
 }
 
